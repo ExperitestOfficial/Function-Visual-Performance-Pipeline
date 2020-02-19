@@ -2,7 +2,7 @@
 <suite name="Test-class Suite" parallel="tests" thread-count="20" >
   <test name="Test-class test1" >
     <classes>
-      <parameter name="deviceQuery" value="@serialnumber='02157df21be36232'">
+      <parameter name="deviceQuery" value="@serialnumber='17d09ba77d24'">
       <class name="com.experitest.auto.AndroidDemoTest" />
       </parameter>
     </classes>
