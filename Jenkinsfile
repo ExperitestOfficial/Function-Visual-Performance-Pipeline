@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Build Server') {
           steps {
-            sleep 3
+            sleep 2
           }
         }
         stage('Build Android App') {
