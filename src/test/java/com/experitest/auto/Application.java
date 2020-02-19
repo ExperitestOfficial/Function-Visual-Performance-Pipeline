@@ -1,6 +1,5 @@
 package com.experitest.auto;
 
-//import com.applitools.eyes.appium.Eyes;
 import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
