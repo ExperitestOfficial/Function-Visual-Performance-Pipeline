@@ -1,5 +1,6 @@
 package com.experitest.auto;
 
+import com.applitools.eyes.appium.Eyes;
 import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -57,11 +58,10 @@ public class Application {
         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys(user);
         driver.findElement(By.xpath("//*[@id='passwordTextField']")).sendKeys(password);
 
-        seetest.startPerformanceTransaction("");
         driver.findElement(By.xpath("//*[@id='loginButton']")).click();
         WebDriverWait wait = new WebDriverWait(driver, 20, 100);
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='pBar']")));
-        seetest.endPerformanceTransaction("Login");
+
+        try {wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='pBar']")));}catch (Exception ex){};
         seetest.stopStepsGroup();
     }
 
