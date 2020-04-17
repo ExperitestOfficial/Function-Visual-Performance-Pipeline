@@ -49,7 +49,7 @@ pipeline {
         }
       }
     }
-    stage('Check Performance') {
+    stage('AI Performance') {
       parallel {
         stage('Check Performance') {
           steps {
